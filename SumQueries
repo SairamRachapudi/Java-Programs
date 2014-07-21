@@ -16,6 +16,7 @@ class SumQueries
   n=f.charAt(0)- '0';
   m=f.charAt(1)- '0';
  
+ 
   a=new int[n];
   b=new int[n];
   c=new int[1000000];
