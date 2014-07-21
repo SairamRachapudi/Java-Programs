@@ -1,0 +1,68 @@
+import java.io.*;
+import java.util.Scanner;
+
+class SumQueries
+{
+
+ public static int p=0,n=0,m=0;
+ public static int a[],b[];
+ 
+  public static void main(String args[])
+  {
+
+  int c[];
+  Scanner s=new Scanner(System.in);
+  String f=s.next();
+  n=f.charAt(0)- '0';
+  m=f.charAt(1)- '0';
+ 
+  a=new int[n];
+  b=new int[n];
+  c=new int[1000000];
+  int i=0;
+  for(int y=0;y<n;y++)
+  {
+   a[y]=y+1;
+ 
+  }
+ 
+ int g=0;
+ for(int y=n;y<2*n;y++,g++)
+  {
+   b[g]=y+1;
+ 
+  }
+
+ int cs=0;
+  
+ for (int v1=0;v1<n;v1++) {
+        for (int v2=0;v2<n;v2++) {
+        c[cs]=a[v1]+b[v2];
+           cs++;
+         
+        }
+    }
+
+ while(m>0)
+  {
+   int k=s.nextInt();
+   check(k,c);
+   m--;
+  }
+}
+
+  public static void check(int d,int[] tr)
+ {
+ int count=0;
+  for(int x=0;x<100;x++)
+ {
+ 
+  if(tr[x]==d)
+   count++;
+  
+ }
+ System.out.println(""+count);
+ }
+  
+ 
+}
