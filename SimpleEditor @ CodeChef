@@ -1,0 +1,41 @@
+import java.io.*;
+import java.util.Scanner;
+import java.lang.StringBuffer;
+
+class SimpleEditor {
+
+
+ 
+ public static int t=0,n=0;
+ public static void main(String args[]) {
+ Scanner sl=new Scanner(System.in);
+ n=sl.nextInt();
+ StringBuffer str=new StringBuffer(10000);
+ int k=0;
+ int h=0,h1=0;
+ while(k<n)
+
+ {  
+   String p=sl.next();
+  char ch=p.charAt(0);
+  if(ch=='+')
+  {
+   h=Character.getNumericValue(p.charAt(1));
+   p=p.substring(2); 
+   str.insert(h,p);
+   }
+  else 
+ {
+   h=Character.getNumericValue(p.charAt(1));
+   h1=Character.getNumericValue(p.charAt(2)); 
+   h=h-1;
+   p=str.substring(h,h1); 
+   System.out.println(p);
+   //sc[t]=p+"";
+  t++;
+ }
+k++;
+}
+}
+
+ }
